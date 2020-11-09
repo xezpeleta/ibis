@@ -5,7 +5,7 @@ on:
 
 jobs:
   main:
-    runs-on: ubuntu-lastest
+    runs-on: ubuntu-latest
     steps:
       -
         name: Set up QEMU
