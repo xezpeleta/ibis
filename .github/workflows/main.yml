@@ -9,10 +9,7 @@ jobs:
     steps:
       - name: Get the version
         id: get_version
-        run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
-      - name: Get the version without v
-        id: get_version_without_v
-        run: echo ::set-output name=VERSION_WITHOUT_V::${steps.get_version.outputs.VERSION:1}
+        run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\/v}
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
       - name: Set up Docker Buildx
@@ -37,8 +34,8 @@ jobs:
           push: true
           tags: |
             xezpeleta/ibis:latest
-            xezpeleta/ibis:${{ steps.get_version.outputs.VERSION_WITHOUT_V }}
+            xezpeleta/ibis:${{ steps.get_version.outputs.VERSION }}
             ghcr.io/xezpeleta/ibis:latest
-            ghcr.io/xezpeleta/ibis:${{ steps.get_version.outputs.VERSION_WITHOUT_V }}
+            ghcr.io/xezpeleta/ibis:${{ steps.get_version.outputs.VERSION }}
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
