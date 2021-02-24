@@ -32,6 +32,7 @@ jobs:
           #context: .
           #file: Dockerfile
           push: true
+          platforms: linux/amd64,linux/arm64,linux/ppc64le
           tags: |
             xezpeleta/ibis:latest
             xezpeleta/ibis:${{ steps.get_version.outputs.VERSION }}
