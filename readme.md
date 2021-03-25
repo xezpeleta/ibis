@@ -1,4 +1,4 @@
-[![Publish Docker image](https://github.com/xezpeleta/ibis/actions/workflows/main.yml/badge.svg)](https://github.com/xezpeleta/ibis/actions/workflows/main.yml)
+[![Docker image](https://github.com/xezpeleta/ibis/actions/workflows/main.yml/badge.svg)](https://github.com/xezpeleta/ibis/actions/workflows/main.yml)
 
 <p align="center">
     <img src="https://raw.githubusercontent.com/themsaid/ibis/master/art/cover.png" alt="Ibis logo" width="480">
