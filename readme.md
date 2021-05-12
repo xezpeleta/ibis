@@ -19,7 +19,7 @@ Ibis was used to create [Laravel Queues in Action](https://learn-laravel-queues.
 
 ## Installation
 
-Make sure you have PHP7.3 or above installed on your system.
+Make sure you have PHP7.3 or above installed on your system and that your gd extension is enabled in your php.ini file.
 
 First, install the composer package globally:
 
@@ -64,6 +64,14 @@ Inside the content directory, you can write multiple `.md` files. Ibis uses the 
 
 <h3> tags define different titles inside a chapter.
 ``` 
+
+### Using images
+
+Images can be stored in the content folder and then brought in like this:
+
+```
+![Screenshot 1](content/screenshot-1.png)
+```
 
 ## Using Fonts
 
